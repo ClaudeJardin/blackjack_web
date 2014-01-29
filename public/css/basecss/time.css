@@ -1,0 +1,41 @@
+#state_blackjack_1.state_blackjack_style {
+  -webkit-animation: show_up 0.5s;
+  animation: show_up 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#state_busted_1.state_busted_style {
+  -webkit-animation: show_up 0.5s;
+  animation: show_up 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#state_stay_1.state_stay_style {
+  -webkit-animation: show_up 0.5s;
+  animation: show_up 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+#front_1.player_front_style {
+  -webkit-animation: first_front 0.5s;
+  animation: first_front 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#back_1.player_back_style {	
+  -webkit-animation: first_back 0.5s;
+  animation: first_back 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}

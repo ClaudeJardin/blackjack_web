@@ -1,0 +1,82 @@
+<div id="blackjack_game" class="blackjack_game_style" width="100%" height="100%">
+<% move_forward_step = 0 %>
+<% delay_time = 2 %>
+
+<br />
+
+<div style="width:100%;float:left;">
+
+
+<% session[:players].non_dealer_players.count.times do |i| %>
+	<% player = session[:players].non_dealer_players[i] %>
+	<div id="blackjack_player<%= i + 1 %>" class="player_block_style">
+		<h5><%= player.name %></h5>
+		    <% k = 0 %>
+
+			<% player.cards.each do |card| %>
+				<% if player.is_human == 0 %>  
+					<div id="speech_<%= session[:game].delay_time_of_hit(i, k) %>" class="speech">Hit!</div>
+				<% end %>
+				<div class="card_list_<%= k + 1 %>">					
+					<div class="card_style">
+						<div class="player_back_style" id="back_<%= session[:game].delay_time_of_card(i, k) %>"><img src="/images/cards/cover.jpg"></div>
+						<div class="player_front_style" id="front_<%= session[:game].delay_time_of_card(i, k) %>"><img src="/images/cards/<%= card.suit_of_card + "_" + card.face_to_s + ".jpg" %>"></div>
+					</div>
+				</div>
+				
+				<% k = k + 1 %>
+			<% end %>
+			<% delay_time = session[:game].delay_time_of_states(i) %>
+			<div id="state_blackjack<%= (player.blackjack? && delay_time > 0 && (session[:game].initial_dealing? || player.card_count > 2))? '_' + delay_time.to_s : ((player.blackjack?)? '' : '_0')  %>" class="state_blackjack_style">Blackjack!</div>
+			<div id="state_busted_<%= (player.busted? && delay_time > 0)? delay_time : 0 %>" class="state_busted_style">Busted!</div>
+			<div id="state_stay_<%= (player.stay? && delay_time > 0)? delay_time : 0 %>" class="state_stay_style">Stay.</div>
+	</div>
+<% end %>
+
+<% player = session[:game].human_player %>
+<% if player.is_human == 1 %>
+	<div id="player_hit_stay_<%= session[:game].delay_time_of_buttons %>" class="player_hit_stay_style">	
+		<form id="stay_form" class="stay_form_style" action="/game/player/stay" method="post">
+			<input type="submit" class="btn btn-success" value="Stay"/>
+		</form>	
+		<form id="hit_form" class="hit_form_style" action="/game/player/hit" method="post">
+			<input type="submit" class="btn btn-warning" value="Hit"/>
+		</form>
+
+	</div>
+<% end %>
+
+</div>
+</div>
+
+<div style="width:100%;">
+
+<div id="dealer_block" class="dealer_block_style">
+  <% i = 0 %>
+  <% session[:players].dealer_player.cards.each do |card| %>
+	<div class="dealer_card_list">
+		<div class="card_style">
+			<div class="<%= session[:game].dealer_card_style('back', i) %>" id="<%= session[:game].dealer_card_id('back', i) %>"><img src="/images/cards/cover.jpg"></div>
+			<div class="<%= session[:game].dealer_card_style('front', i) %>" id="<%= session[:game].dealer_card_id('front', i) %>"><img src="/images/cards/<%= card.suit_of_card + "_" + card.face_to_s + ".jpg" %>"></div>
+		</div>
+    </div>
+	<% i = i + 1 %>
+  <% end %>
+</div>
+<div id="dealer_result_<%= session[:game].delay_time_of_dealer_result %>" class="dealer_result_style"><%= session[:game].dealer_result %></div>
+</div>
+<% if session[:game].finished? %>
+	<% session[:players].non_dealer_players.count.times do |i| %>
+		<% player = session[:players].non_dealer_players[i] %>
+		<div id="player_result_<%= session[:game].delay_time_of_result %>" class="<%= (player.won?)? 'won_result_style' : ((player.lost?)? 'lost_result_style' : 'tie_result_style') %>_<%= i + 1 %>">
+			<%= session[:game].player_result(i) %>
+		</div>
+	<% end %>
+	<div id="try_again_<%= session[:game].delay_of_try_again %>" class="try_again_style">	
+		<form id="try_again_form" class="try_again_form_style" action="/game/player/restart" method="post">
+			<input type="submit" class="btn btn-primary" value="Try again?"/>
+		</form>	
+	</div>
+<% end %>
+
+</div>

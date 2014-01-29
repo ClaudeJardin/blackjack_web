@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First App</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/application.css">
+	<link rel="stylesheet" href="/css/titlepagestyle.css">
+  </head>
+  <body style="padding-top: 50px;">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+            <ul class="nav">
+              <li><a href="/" style="font-weight:800;">Welcome to Blackjack</a></li>
+            </ul>
+      </div>
+    </div>
+	
+	<div class="home_bg_style">
+		<div class="theme_picture">
+			<div class="card4"><img src="/images/cards/cover.jpg"></div>
+			<div class="card1"><img src="/images/cards/spades_ace.jpg"></div>
+			<div class="card2"><img src="/images/cards/cover.jpg"></div>
+			<div class="card3"><img src="/images/cards/cover.jpg"></div>
+			
+		</div>
+		<div class="container">
+			<%if @error %>
+				<div class="alert alert-error"><%=@error%></div>
+			<% end %>
+			<%= yield %>
+		</div>
+	</div>
+
+  </body>
+</html>

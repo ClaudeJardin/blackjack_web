@@ -1,0 +1,727 @@
+.bg_style {
+  background-color: #108B3A;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position:fixed; 
+  top:0px; 
+  left:0px; 
+  bottom:0px; 
+  right:0px; 
+}
+.player_card_block {
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  width: 100px;
+  height: 150px;
+  opacity:0.9
+}
+.bet_circle {
+  -moz-border-radius: 60px/60px;
+  -webkit-border-radius: 60px 60px;
+  border-radius: 60px/60px;
+  border:solid 3px #fff; 
+  width: 60px;
+  height: 60px;
+  opacity:0.9
+}
+#player1.player_card_block {
+  position:absolute;
+  top:300px;
+  left:100px;
+}
+#bet1.bet_circle {
+  position:absolute;
+  top:310px;
+  left:35px;
+}
+#player2.player_card_block {
+  position:absolute; 
+  top:350px;
+  left:350px;
+}
+#bet2.bet_circle {
+  position:absolute;
+  top:360px;
+  left:285px;
+}
+#player3.player_card_block {
+  position:absolute; 
+  top:350px;
+  left:600px;
+}
+#bet3.bet_circle {
+  position:absolute;
+  top:360px;
+  left:535px;
+}
+#player4.player_card_block {
+  
+  position:absolute; 
+  top:300px;
+  left:850px;
+}
+#bet4.bet_circle {
+  position:absolute;
+  top:310px;
+  left:785px;
+}
+.blackjack_text_style {
+  color: white;
+  text-align: center;
+  font-size: 120px;
+  font-family: "Brush Script MT", cursive;
+  position:absolute;
+  top:130px;
+  left:0px;
+  width:1024px;
+}
+.blackjack_text_style2 {
+  color: yellow;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  position:absolute;
+  top:210px;
+  left:0px;
+  width:1024px;
+}
+
+.content_style {
+  position: absolute;
+  top:0px; 
+  left:0px; 
+  bottom:0px; 
+  right:0px;
+}
+.blackjack_game_style {
+
+}
+.blackjack_game, h1
+{
+  color: white;
+  text-align: center;
+  text-shadow: #000000 2px 2px 7px;
+  font-family: "Brush Script MT", cursive;
+}
+.player_block_style {
+  width:200px; 
+}
+.player_block_style, ul {
+  list-style-type: none;
+}
+#dealer_block.dealer_block_style {
+  position:absolute; 
+  top:110px;
+  left:450px;
+}
+#blackjack_player1.player_block_style {
+  position:absolute; 
+  top:260px;
+  left:850px;
+}
+#blackjack_player2.player_block_style {
+  position:absolute; 
+  top:310px;
+  left:600px;
+}
+#blackjack_player3.player_block_style {
+  position:absolute; 
+  top:310px;
+  left:350px;
+}
+#blackjack_player4.player_block_style {
+  position:absolute;
+  top:260px;
+  left:100px;
+}
+.dealer_block_style {
+  positive:absolute;
+  left:-20px;
+  top:100px;
+  text-align: center;
+}
+.dealer_card_list {
+  float:left;
+  width: 100px;
+  position: relative;
+  left:-50px;
+}
+.dealer_back_style {
+  position:absolute;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+ 
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  background: #FFF;
+  width: 80px;
+  height: 116px;
+  left:-20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: visible;
+}
+.dealer_front_style {
+  position:absolute;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg);
+  background: #FFF;
+  width: 80px;
+  height: 116px;
+  left:-20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+}
+.dealer_card_style {
+  position: relative;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+  background: #FFF;
+  width: 80px;
+  height: 116px;
+  visibility: hidden;
+}
+.dealer_result_style {
+  position:absolute;
+  top:60px;
+  left: 20px;
+  font-style:italic;
+  text-align:left;
+  width:250px;
+  color:white;
+  font-size:20px;
+  text-shadow: 1px 1px 5px black;
+  opacity: 0;
+}
+.player_result_0 {
+  opacity:0;
+}
+.won_result_style_1 {
+  position:absolute;
+  top:332px;
+  left:797px;
+  font-size:25px;
+  color:yellow;
+  text-shadow: 1px 1px 5px black; 
+  width:40px;
+  text-align:center;
+  opacity:0;
+}
+.won_result_style_2 {
+  position:absolute;
+  top:382px;
+  left:547px;
+  font-size:25px;
+  color:yellow;
+  text-shadow: 1px 1px 5px black;
+  width:40px;
+  text-align:center;
+  opacity:0;
+}
+
+.won_result_style_3 {
+  position:absolute;
+  top:382px;
+  left:297px;
+  font-size:25px;
+  color:yellow;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+
+.won_result_style_4 {
+  position:absolute;
+  top:332px;
+  left:47px;
+  font-size:25px;
+  color:yellow;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+.lost_result_style_1 {
+  position:absolute;
+  top:332px;
+  left:797px;
+  font-size:25px;
+  color:tomato;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+.lost_result_style_2 {
+  position:absolute;
+  top:382px;
+  left:547px;
+  font-size:25px;
+  color:tomato;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+
+.lost_result_style_3 {
+  position:absolute;
+  top:382px;
+  left:297px;
+  font-size:25px;
+  color:tomato;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+
+.lost_result_style_4 {
+  position:absolute;
+  top:332px;
+  left:47px;
+  font-size:25px;
+  color:tomato;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+.tie_result_style_1 {
+  position:absolute;
+  top:332px;
+  left:797px;
+  font-size:25px;
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+.tie_result_style_2 {
+  position:absolute;
+  top:382px;
+  left:547px;
+  font-size:25px;
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+
+.tie_result_style_3 {
+  position:absolute;
+  top:382px;
+  left:297px;
+  font-size:25px;
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+
+.tie_result_style_4 {
+  position:absolute;
+  top:332px;
+  left:47px;
+  font-size:25px;
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  opacity:0;
+  width:40px;
+  text-align:center;
+}
+
+#dealer_result_0.dealer_result_style {
+  opacity: 0;
+}
+#dealer_back_1_1.player_back_style {
+  left:-20px;
+  visibility: visible;
+}
+#dealer_back_1_2.player_back_style {
+  left:-20px;
+  visibility: visible;
+}
+#dealer_front_1_1.player_front_style {
+  left:-20px;
+  visibility: visible;
+}
+#dealer_front_1_2.player_front_style {
+  left:-20px;
+  visibility: visible;
+}
+#dealer_back_0_1.player_back_style {
+  -webkit-animation: dealer_first_anim 0.5s;
+  animation: dealer_first_anim 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#dealer_back_0_2.player_back_style {
+  -webkit-animation: dealer_first_anim 0.5s;
+  animation: dealer_first_anim 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#dealer_front_0_1.player_front_style {
+  -webkit-animation: dealer_first_anim 0.5s;
+  animation: dealer_first_anim 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#dealer_front_0_2.player_front_style {
+  -webkit-animation: dealer_first_anim 0.5s;
+  animation: dealer_first_anim 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#dealer_back_1.dealer_card_style {
+  left:0px;
+  visibility: visible;
+}
+
+@keyframes dealer_first_anim {
+  from {
+	left:30px;
+	visibility: visible;
+  }
+  to {
+    left:-20px;
+	visibility: visible;
+  }
+}
+@-webkit-keyframes dealer_first_anim {
+  from {
+	left:30px;
+	visibility: visible;
+  }
+  to {
+    left:-20px;
+	visibility: visible;
+  }
+}
+.state_blackjack_style {
+  position:absolute;
+  text-align:left;
+  top:180px;
+  left:130px;
+  width:150px;
+  font-style:italic;
+  color:chartreuse;
+  font-size:18px;
+  opacity: 0;
+  
+}
+.state_busted_style {
+  position:absolute;
+  text-align:left;
+  top:180px;
+  left:130px;
+  width:150px;
+  font-style:italic;
+  color:chartreuse;
+  font-size:18px;
+  opacity: 0;
+}
+.state_stay_style {
+  position:absolute;
+  text-align:left;
+  top:180px;
+  left:130px;
+  width:150px;
+  font-style:italic;
+  color:chartreuse;
+  font-size:18px;
+  opacity: 0;
+  
+}
+#state_blackjack_0.state_blackjack_style {
+  opacity: 0;
+}
+#state_busted_0.state_busted_style {
+  opacity: 0;
+}
+#state_stay_0.state_busted_style {
+  opacity: 0;
+}
+#state_blackjack.state_blackjack_style {
+  opacity: 1;
+}
+#state_busted.state_busted_style {
+  opacity: 1;
+}
+#state_stay.state_busted_style {
+  opacity: 1;
+}
+@-webkit-keyframes show_up {
+  from {
+	opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show_up {
+  from {
+	opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade_out {
+  from {
+	opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade_out {
+  from {
+	opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.blackjack_player, h5 {
+  color:white;
+  text-shadow: 1px 1px 5px black;
+  font-size: 20px;
+}
+.card_style {
+  width: 80px;
+  height: 116px;
+  margin: 10px;
+  float: left;
+  
+  position: relative;
+  top: 5px;
+  left: 0px
+}
+.card_list_1 {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.card_list_2 {
+  position: relative;
+  left: -80px;
+  top: 25px;
+}
+.card_list_3 {
+  position: relative;
+  left: -10px;
+  top: -90px;
+}
+.card_list_4 {
+  position: relative;
+  left: -80px;
+  top: -70px;
+}
+.card_list_5 {
+  position: relative;
+  left: 0px;
+  top: -180px;
+}
+.card_list_6 {
+  position: relative;
+  left: -80px;
+  top: -150px;
+}
+.card_list_7 {
+  position: relative;
+  left: 0px;
+  top: -260px;
+}
+.card_list_8 {
+  position: relative;
+  left: -80px;
+  top: -200px;
+}
+.player_back_style {
+  position:absolute;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+ 
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  background: #FFF;
+  width: 80px;
+  height: 116px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+}
+.player_front_style {
+  position:absolute;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg);
+  background: #FFF;
+  width: 80px;
+  height: 116px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+}
+#front_0.player_front_style {
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+  visibility: visible;
+}
+#back_0.player_back_style {
+  visibility: hidden;
+}
+@keyframes first_back {
+  from {
+	transform: perspective(600px) rotate(0deg);
+	visibility: visible;
+  }
+  to {
+    transform: perspective(600px) rotate(180deg);
+	visibility: visible;
+  }
+}
+@-webkit-keyframes first_back {
+  from {
+	-webkit-transform: perspective(600px) rotateY(0deg);
+	visibility: visible;
+  }
+  to {
+    -webkit-transform: perspective(600px) rotateY(180deg);
+	visibility: visible;
+  }
+}
+@keyframes first_front {
+  from {
+	transform: perspective(1200px) rotate(-180deg);
+	visibility: visible;
+  }
+  to {
+    transform: perspective(1200px) rotate(0deg);
+	visibility: visible;
+  }
+}
+@-webkit-keyframes first_front {
+  from {
+	-webkit-transform: perspective(1200px) rotateY(-180deg);
+	visibility: visible;
+  }
+  to {
+    -webkit-transform: perspective(1200px) rotateY(0deg);
+	visibility: visible;
+  }
+}
+.card_style, img {
+  width: 80px;
+  height: 116px;
+  border-radius: 7px;
+}
+.player_hit_stay_style {
+  position: absolute;
+  top: 50px;
+  left: 1000px;
+  width: 200px;
+  opacity: 0;
+}
+.try_again_style {
+  position: absolute;
+  top: 50px;
+  left: 1000px;
+  width: 200px;
+  opacity: 0;
+}
+.player_hit_stay_style > .hit_form_style {
+  float: left;
+  width: 65px;
+}
+.player_hit_stay_style > .stay_form_style {
+  float: left;
+  width: 65px;
+}
+.try_again_style > .try_again_form_style {
+  float: left;
+  width: 130px;
+}
+#player_hit_stay_0.player_hit_stay_style {
+  opacity:0;
+}
+#try_again_0.try_again_style {
+  opacity:0;
+}
+.speech {
+	position: absolute;
+	font-weight: 900;
+	top: -50px;
+	left: 50px;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: #fff;
+	border: 2px solid #444;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	opacity:0;
+}
+
+.speech:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 36px;
+	top: 50px;
+	border: 12px solid;
+	border-color: #444 transparent transparent #444;
+
+}
+
+.speech:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+	top: 50px;
+	border: 9px solid;
+	border-color: #fff transparent transparent #fff;
+}
+#speech_0.speech {
+  opacity:0;
+}
+

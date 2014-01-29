@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First App</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/gamestyle.css">
+    <link rel="stylesheet" href="/application.css">
+  </head>
+  <body style="padding-top: 0px;">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+			<ul class="nav">
+              <li><a href="/" style="font-weight:800;">Home</a></li>
+            </ul>
+      </div>
+    </div>
+  
+  <div class="bg_style">
+	<div id="player1" class="player_card_block"></div>
+	<div id="player2" class="player_card_block"></div>
+	<div id="player3" class="player_card_block"></div>
+	<div id="player4" class="player_card_block"></div>
+	<div id="bet1" class="bet_circle"></div>
+	<div id="bet2" class="bet_circle"></div>
+	<div id="bet3" class="bet_circle"></div>
+	<div id="bet4" class="bet_circle"></div>
+	<div id="blackjack_text" class="blackjack_text_style">Blackjack</div>
+	<div id="blackjack_text2" class="blackjack_text_style2">INSURANCE PAYS 2 TO 1</div>
+	
+	<div class="content_style">
+		<%if @error %>
+		<div class="alert alert-error"><%=@error%></div>
+		<% end %>
+		<%= yield %>
+	</div>
+  </div>
+  </body>
+</html>

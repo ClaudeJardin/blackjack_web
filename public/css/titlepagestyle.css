@@ -1,0 +1,81 @@
+.home_bg_style {
+  background-color: #FFF;
+}
+.theme_picture {
+  text-align: center;
+  width: 100%;
+  height: 500px;
+}
+.new_player_form_style {
+  position: absolute;
+  top: 200px;
+  left: 650px;
+  text-align: center;
+  color: #000;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #ccc; 
+  width: 400px;
+  height: 150px;
+}
+.card1 {
+  position:relative;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 5px #fff; 
+  box-shadow: 3px 3px 60px #333;
+  -webkit-transform: perspective(600px) rotate(10deg);
+  transform: perspective(600px) rotate(10deg);
+  width: 160px;
+  height: 232px;
+  left:120px;
+  top:-10px;
+  visibility: visible;
+}
+.card2 {
+  position:relative;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 3px 3px 20px #000;
+  -webkit-transform: perspective(600px) rotate(120deg);
+  transform: perspective(600px) rotate(10deg);
+  width: 160px;
+  height: 232px;
+  left:270px;
+  top:-50px;
+  visibility: visible;
+}
+.card3 {
+  position:relative;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+  -webkit-transform: perspective(600px) rotate(40deg) rotateY(40deg);
+  transform: perspective(600px) rotate(10deg);  
+  width: 160px;
+  height: 232px;
+  left:370px;
+  top:-535px;
+  visibility: visible;
+}
+.card4 {
+  position:relative;
+  -moz-border-radius: 10px/10px;
+  -webkit-border-radius: 10px 10px;
+  border-radius: 10px/10px;
+  border:solid 3px #fff; 
+  box-shadow: 1px 1px 10px #000;
+  -webkit-transform: perspective(300px) rotate(-40deg)  rotateY(-40deg);
+  transform: perspective(600px) rotate(10deg);  
+  width: 128px;
+  height: 186px;
+  left:50px;
+  top:-50px;
+  visibility: visible;
+}
